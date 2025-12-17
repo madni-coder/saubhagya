@@ -83,15 +83,6 @@ export default function App() {
                     <div className="brand-mark">❤</div>
                     <div className="brand-name">Saubhagya Marriage</div>
                 </div>
-                <button
-                    className="menu-toggle"
-                    onClick={() => setSidebarOpen(!sidebarOpen)}
-                    aria-label="Toggle menu"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
                 <nav className="nav-links">
                     <a href="#profiles">Browse Profiles</a>
                     <a href="#stories">Success Stories</a>
@@ -107,6 +98,15 @@ export default function App() {
                         Contact Us
                     </a>
                 </div>
+                <button
+                    className="menu-toggle"
+                    onClick={() => setSidebarOpen(!sidebarOpen)}
+                    aria-label="Toggle menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </header>
 
             {sidebarOpen && (
@@ -117,10 +117,6 @@ export default function App() {
             )}
             <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
                 <div className="sidebar-header">
-                    <div className="brand">
-                        <div className="brand-mark">❤</div>
-                        <div className="brand-name">Saubhagya Marriage</div>
-                    </div>
                     <button
                         className="close-btn"
                         onClick={() => setSidebarOpen(false)}
@@ -129,24 +125,14 @@ export default function App() {
                         ×
                     </button>
                 </div>
-                <nav className="sidebar-nav">
-                    <a href="#profiles" onClick={() => setSidebarOpen(false)}>
-                        Browse Profiles
-                    </a>
-                    <a href="#stories" onClick={() => setSidebarOpen(false)}>
-                        Success Stories
-                    </a>
-                    <a href="#process" onClick={() => setSidebarOpen(false)}>
-                        How It Works
-                    </a>
-                    <a href="#help" onClick={() => setSidebarOpen(false)}>
-                        Help
-                    </a>
-                    <a href="#login" onClick={() => setSidebarOpen(false)}>
+                <div className="sidebar-auth">
+                    <a
+                        className="link"
+                        href="#login"
+                        onClick={() => setSidebarOpen(false)}
+                    >
                         Login
                     </a>
-                </nav>
-                <div className="sidebar-actions">
                     <button
                         className="btn btn-outline"
                         onClick={() => setSidebarOpen(false)}
@@ -161,6 +147,20 @@ export default function App() {
                         Contact Us
                     </a>
                 </div>
+                <nav className="sidebar-nav">
+                    <a href="#profiles" onClick={() => setSidebarOpen(false)}>
+                        Browse Profiles
+                    </a>
+                    <a href="#stories" onClick={() => setSidebarOpen(false)}>
+                        Success Stories
+                    </a>
+                    <a href="#process" onClick={() => setSidebarOpen(false)}>
+                        How It Works
+                    </a>
+                    <a href="#help" onClick={() => setSidebarOpen(false)}>
+                        Help
+                    </a>
+                </nav>
             </aside>
 
             <section className="hero">
@@ -245,7 +245,7 @@ export default function App() {
                     stories.
                 </p>
                 <div className="story-grid">
-                    {stories.map((story) => (
+                    {stories.map((story, index) => (
                         <article className="story-card" key={story.name}>
                             <div
                                 className="story-image"
@@ -258,7 +258,9 @@ export default function App() {
                                     <h3>{story.name}</h3>
                                     <span>{story.location}</span>
                                 </div>
-                                <div className="story-rating">★★★★★</div>
+                                <div className="story-rating">
+                                    {index < 2 ? "★★★★☆" : "★★★★★"}
+                                </div>
                                 <p className="story-quote">{story.quote}</p>
                                 <div className="story-date">{story.date}</div>
                             </div>
@@ -365,7 +367,8 @@ export default function App() {
                                 />
 
                                 <a href="">
-                                    Baijnathpara , Raipur, Chhattisgarh, India
+                                    Avanti Vihar, Anand Niketan Marg , Raipur,
+                                    Chhattisgarh, India
                                 </a>
                             </div>
                         </div>
