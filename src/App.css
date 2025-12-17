@@ -327,6 +327,147 @@ a {
     background: var(--rose-dark);
 }
 
+/* Enhanced Register Now Button */
+.register-hero-btn {
+    position: relative;
+    background: linear-gradient(135deg, #d4365b 0%, #f3476c 100%);
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 800;
+    padding: 1.5rem 4rem;
+    border-radius: 50px;
+    box-shadow: 0 15px 40px rgba(212, 54, 91, 0.4),
+        0 0 30px rgba(243, 201, 91, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    animation: float 3s ease-in-out infinite, pulse 2s ease-in-out infinite;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.register-hero-btn::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+.register-hero-btn::after {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 50px;
+    padding: 3px;
+    background: linear-gradient(45deg, #f3c95b, #d4365b, #f3476c, #f3c95b);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: rotate-border 4s linear infinite;
+    z-index: -1;
+}
+
+.register-hero-btn:hover {
+    background: linear-gradient(135deg, #f3476c 0%, #ff5c7c 100%);
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 20px 50px rgba(212, 54, 91, 0.5),
+        0 0 50px rgba(243, 201, 91, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    animation: float 3s ease-in-out infinite,
+        pulse-hover 1s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        box-shadow: 0 15px 40px rgba(212, 54, 91, 0.4),
+            0 0 30px rgba(243, 201, 91, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 15px 40px rgba(212, 54, 91, 0.6),
+            0 0 50px rgba(243, 201, 91, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes pulse-hover {
+    0%,
+    100% {
+        box-shadow: 0 20px 50px rgba(212, 54, 91, 0.5),
+            0 0 50px rgba(243, 201, 91, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 20px 50px rgba(212, 54, 91, 0.7),
+            0 0 70px rgba(243, 201, 91, 0.7),
+            inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -50%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+@keyframes rotate-border {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .register-hero-btn {
+        font-size: 1rem;
+        padding: 0.9rem 2rem;
+        animation: float-mobile 3s ease-in-out infinite,
+            pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes float-mobile {
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+
+    .register-hero-btn:active {
+        transform: scale(0.95);
+        transition: transform 0.1s ease;
+    }
+}
+
 .btn-outline {
     border: 2px solid var(--rose);
     background: transparent;
@@ -1081,10 +1222,126 @@ a {
 
     .footer-top {
         grid-template-columns: 1fr;
-        gap: 22px;
+        gap: 10px;
+        text-align: center;
     }
 
     .footer {
-        padding: 32px 18px;
+        padding: 24px 20px 18px;
+        background: linear-gradient(180deg, #f9f4ee 0%, #f6f1ea 100%);
+    }
+
+    .footer-brand {
+        padding-bottom: 12px;
+        border-bottom: 1px solid rgba(212, 54, 91, 0.08);
+    }
+
+    .footer-brand .brand {
+        justify-content: center;
+        margin-bottom: 6px;
+    }
+
+    .footer-brand .brand-mark {
+        font-size: 22px;
+    }
+
+    .footer-brand .brand-name {
+        font-size: 17px;
+    }
+
+    .footer-brand p {
+        font-size: 13px;
+        line-height: 1.5;
+        margin: 8px auto 10px;
+        max-width: 300px;
+        color: #666;
+    }
+
+    .footer-socials {
+        justify-content: center;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .footer-socials a {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .footer-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 0;
+    }
+
+    .footer-col a {
+        font-size: 14px;
+        padding: 3px 0;
+        transition: color 0.2s ease;
+        color: var(--muted);
+    }
+
+    .footer-col a:hover {
+        color: var(--rose);
+    }
+
+    .contact-line {
+        justify-content: center;
+        gap: 5px;
+        padding: 3px 0;
+        flex-wrap: wrap;
+    }
+
+    .contact-line a {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .footer-divider {
+        margin: 12px 0 10px;
+        background: rgba(212, 54, 91, 0.1);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .footer-bottom span {
+        font-size: 12px;
+        color: var(--muted);
+        font-weight: 600;
+    }
+
+    .footer-links {
+        justify-content: center;
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+        font-weight: 600;
+        padding: 3px 0;
+        transition: color 0.2s ease;
+        position: relative;
+    }
+
+    .footer-links a:hover {
+        color: var(--rose);
+    }
+
+    .footer-links a:not(:last-child)::after {
+        content: '•';
+        position: absolute;
+        right: -6px;
+        color: var(--muted);
+        opacity: 0.5;
     }
 }

@@ -137,7 +137,7 @@ export default function App() {
                         className="btn btn-outline"
                         onClick={() => setSidebarOpen(false)}
                     >
-                        Browse
+                        Register
                     </button>
                     <a
                         href="tel:9399265893"
@@ -191,7 +191,10 @@ export default function App() {
             </section>
 
             <section id="process" className="section">
-                <div className="section-pill">Simple Process</div>
+                <button className="btn btn-primary register-hero-btn">
+                    Register Now{" "}
+                </button>
+
                 <h2 className="section-title">How Saubhagya Marriage Works</h2>
                 <p className="section-lead">
                     Finding your perfect life partner is now easier than ever.
@@ -284,9 +287,7 @@ export default function App() {
                     <a href="tel:9399265893" className="btn btn-secondary">
                         Contact Us
                     </a>
-                    <button className="btn btn-outline light">
-                        Browse Profiles
-                    </button>
+                    <button className="btn btn-outline light">Register </button>
                 </div>
             </section>
 
@@ -367,8 +368,8 @@ export default function App() {
                                 />
 
                                 <a href="">
-                                    Avanti Vihar, Anand Niketan Marg , Raipur,
-                                    Chhattisgarh, India
+                                    Avanti Vihar, Anand Niketan Marg, Raipur, C.G 
+                                    
                                 </a>
                             </div>
                         </div>
