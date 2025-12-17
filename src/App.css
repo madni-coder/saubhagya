@@ -1338,7 +1338,7 @@ a {
     }
 
     .footer-links a:not(:last-child)::after {
-        content: '•';
+        content: "•";
         position: absolute;
         right: -6px;
         color: var(--muted);
