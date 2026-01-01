@@ -191,9 +191,15 @@ export default function App() {
             </section>
 
             <section id="process" className="section">
-                <button className="btn btn-primary register-hero-btn">
-                    Register Now{" "}
-                </button>
+                <div className="register-row">
+                    <button className="btn btn-primary register-hero-btn">
+                        REGISTER NOW
+                    </button>
+                    <h2 className="section-title highlighted">
+                        Register in minutes with just basic details — No Biodata
+                        Needed.
+                    </h2>
+                </div>
 
                 <h2 className="section-title">How Saubhagya Marriage Works</h2>
                 <p className="section-lead">
@@ -368,8 +374,8 @@ export default function App() {
                                 />
 
                                 <a href="">
-                                    Avanti Vihar, Anand Niketan Marg, Raipur, C.G 
-                                    
+                                    Avanti Vihar, Anand Niketan Marg, Raipur,
+                                    C.G
                                 </a>
                             </div>
                         </div>
