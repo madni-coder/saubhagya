@@ -385,8 +385,7 @@ export default function App() {
 
                     <div className="footer-bottom">
                         <span>
-                            © 2026 Saubhagya Marriage. All rights reserved.
-                        </span>
+Developed By : Crown Edge Technologies                        </span>
                         <div className="footer-links">
                             <a href="#terms">Terms of Service</a>
                             <a href="#privacy">Privacy Policy</a>
