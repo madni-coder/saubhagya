@@ -55,21 +55,21 @@ const stories = [
         location: "Mumbai, Maharashtra",
         date: "Married Dec 2023",
         quote: "We connected on Saubhagya Marriage and knew instantly that we were meant to be. Within 6 months, we were married. Thank you for bringing us together!",
-        image: "/card1.jpg",
+        image: "/card1.webp",
     },
     {
         name: "Lakshmi & Karthik",
         location: "Chennai, Tamil Nadu",
         date: "Married Aug 2023",
         quote: "After years of searching, we found each other here. The platform made it so easy to find someone with matching values and family background.",
-        image: "/card2.jpg",
+        image: "/card2.webp",
     },
     {
         name: "Neha & Arjun",
         location: "Bangalore, Karnataka",
         date: "Married Mar 2024",
         quote: "We were hesitant about online matrimony at first, but Saubhagya Marriage's verified profiles gave us confidence. Now we're happily married!",
-        image: "/card3.jpg",
+        image: "/card3.webp",
     },
 ];
 
