@@ -84,17 +84,15 @@ export default function App() {
                     <div className="brand-name">Saubhagya Marriage</div>
                 </div>
                 <nav className="nav-links">
-                    <a href="#profiles">Browse Profiles</a>
                     <a href="#stories">Success Stories</a>
                     <a href="#process">How It Works</a>
                     <a href="#help">Help</a>
                 </nav>
                 <div className="auth">
-                    <a className="link" href="#login">
+                    <a className="link" href="http://localhost:5174/login">
                         Login
                     </a>
-                    <button className="btn btn-outline">Browse</button>
-                    <a href="tel:9399265893" className="btn btn-primary">
+                    <a href="tel:9977400313" className="btn btn-primary">
                         Contact Us
                     </a>
                 </div>
@@ -128,14 +126,17 @@ export default function App() {
                 <div className="sidebar-auth">
                     <a
                         className="link"
-                        href="#login"
+                        href="http://localhost:5174/login"
                         onClick={() => setSidebarOpen(false)}
                     >
                         Login
                     </a>
                     <button
                         className="btn btn-outline"
-                        onClick={() => setSidebarOpen(false)}
+                        onClick={() => {
+                            setSidebarOpen(false);
+                            window.location.href = "http://localhost:5174/register";
+                        }}
                     >
                         Register
                     </button>
@@ -148,9 +149,7 @@ export default function App() {
                     </a>
                 </div>
                 <nav className="sidebar-nav">
-                    <a href="#profiles" onClick={() => setSidebarOpen(false)}>
-                        Browse Profiles
-                    </a>
+                  
                     <a href="#stories" onClick={() => setSidebarOpen(false)}>
                         Success Stories
                     </a>
@@ -192,7 +191,10 @@ export default function App() {
 
             <section id="process" className="section">
                 <div className="register-row">
-                    <button className="btn btn-primary register-hero-btn">
+                    <button 
+                        className="btn btn-primary register-hero-btn"
+                        onClick={() => window.location.href = "http://localhost:5174/register"}
+                    >
                         REGISTER NOW
                     </button>
                     <h2 className="section-title highlighted">
@@ -290,10 +292,15 @@ export default function App() {
                     Registration is free and takes just 2 minutes.
                 </p>
                 <div className="cta-actions">
-                    <a href="tel:9399265893" className="btn btn-secondary">
+                    <a href="tel:9977400313" className="btn btn-secondary">
                         Contact Us
                     </a>
-                    <button className="btn btn-outline light">Register </button>
+                    <button 
+                        className="btn btn-outline light"
+                        onClick={() => window.location.href = "http://localhost:5174/register"}
+                    >
+                        Register
+                    </button>
                 </div>
             </section>
 
@@ -362,7 +369,7 @@ export default function App() {
                                     }}
                                 />
                                 <a href="tel:+9193400 23226">
-                                    Phone : 93400 23226
+                                    Phone : 9977400313
                                 </a>
                             </div>
                             <div className="contact-line">
